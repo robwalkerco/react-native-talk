@@ -1,0 +1,12 @@
+export default class Example extends Component {
+  render = () => (
+    <View>
+      <Heading>
+        Getting started with
+      </Heading>
+      <SubHeading>
+        React Native
+      </SubHeading>
+    </View>
+  )
+}
