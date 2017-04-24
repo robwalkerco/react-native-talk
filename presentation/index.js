@@ -109,7 +109,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary" notes="So what is React">
-          <Heading size={1} textColor="tertiary" fit>Into to React Native</Heading>
+          <Heading size={1} textColor="tertiary" fit>Intro to React Native</Heading>
           <BlockQuote>
             <Quote textColor="secondary">
               React Native is a framework for building native apps using React
@@ -118,15 +118,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary" notes="Lets look at a simple React component">
-          <Heading size={1} textColor="tertiary" fit>Into to React</Heading>
+          <Heading size={1} textColor="tertiary" fit>Intro to React</Heading>
           <BlockQuote>
             <Quote textColor="secondary">
-              React is a javascript library for creating user interfaces using React
+              React is a JavaScript library for creating user interfaces
             </Quote>
           </BlockQuote>
         </Slide>
 
-        <Slide bgColor="primary" textColor="secondary" notes="<p>Components render simple functions that return JSX</p><p>Uses a shadow DOM for speed</p><p>Provides component lifecycle hooks</p><p>Focuses on the UI</p>">
+        <Slide bgColor="primary" textColor="secondary" notes="<p>Components render simple functions that return JSX</p><p>Lifecycle hooks</p><p>Uses a shadow DOM for speed</p><p>Focuses on the UI</p>">
           <CodePane
             textSize={22}
             transition={[]}
@@ -135,7 +135,7 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
-        <Slide bgColor="primary" textColor="secondary" notes="<p>Uses props to pass values down to components</p><p>Simple to add conditional logic and loops into the JSX</p>">
+        <Slide bgColor="primary" textColor="secondary" notes="<p>Uses props to pass values down to components</p><p>Simple to add conditional logic into the JSX</p><p>Composed from other components.</p>">
           <CodePane
             textSize={22}
             transition={[]}
@@ -144,26 +144,33 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
-        <Slide bgColor="primary" textColor="secondary" notes="<p>Styles are managed from the JS. Allows styles to easily be themed or extended</p>">
-          <CodePane
-            textSize={22}
-            transition={[]}
-            lang="jsx"
-            source={require("raw-loader!../assets/react3.example")}
-          />
+        <Slide bgColor="primary" textColor="secondary">
+          <Heading size={1} textColor="tertiary" fit>Component Lifecycle</Heading>
+          <List>
+            <ListItem>constructor</ListItem>
+            <ListItem>componentWillMount</ListItem>
+            <ListItem>render</ListItem>
+            <ListItem>componentDidMount</ListItem>
+            <ListItem>componentWillReceiveProps</ListItem>
+            <ListItem>shouldComponentUpdate</ListItem>
+            <ListItem>componentWillUpdate</ListItem>
+            <ListItem>render</ListItem>
+            <ListItem>componentDidUpdate</ListItem>
+            <ListItem>componentWillUnmount</ListItem>
+          </List>
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary" notes="The core components are very customisable and can be used to create most of an app">
           <Heading size={1} textColor="tertiary" fit>So, React Native</Heading>
           <List>
-            <ListItem>Learn Once, Write Everywhere</ListItem>
             <ListItem><S type="strikethrough">Write Once, Run Anywhere</S></ListItem>
+            <ListItem>Learn Once, Write Everywhere</ListItem>
             <ListItem>Easily support platform variations</ListItem>
             <ListItem>Provides many core components</ListItem>
           </List>
         </Slide>
 
-        <Slide bgColor="primary">
+        <Slide bgColor="primary" notes="Some platform specific, but most not.">
           <Layout>
             <Fill>
               <Image src={images.components1} height={650} />
@@ -174,12 +181,12 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide bgColor="primary" textColor="secondary" notes="<p>Live reload, Hot Reload, chrome debugging, profiling, CLI tooling, code-push</p><p>iOS, Android, windows, Apple Watch, Apple TV, desktop, web</p>">
+        <Slide bgColor="primary" textColor="secondary" notes="<p>Live reload, Hot Reload, chrome debugging, profiling, CLI tooling, code-push</p><p>iOS, Android, windows 10/UWP, tvOS, macOS, electron, web</p>">
           <List>
-            <ListItem>Exposes and abstracts many device APIs</ListItem>
+            <ListItem>Exposes many device APIs</ListItem>
             <ListItem>Easily expose additional device APIs</ListItem>
             <ListItem>Good developer experience</ListItem>
-            <ListItem>Support for many environments</ListItem>
+            <ListItem>Support for many platforms</ListItem>
           </List>
         </Slide>
 
@@ -202,18 +209,31 @@ export default class Presentation extends React.Component {
           <Image src={images.basics} height={450} />
         </Slide>
 
+        <Slide bgColor="primary" textColor="secondary" notes="<p>Components render simple functions that return JSX</p><p>Uses a shadow DOM for speed</p><p>Provides component lifecycle hooks</p><p>Focuses on the UI</p>">
+          <CodePane
+            textSize={22}
+            transition={[]}
+            lang="jsx"
+            source={require("raw-loader!../assets/reactnative.example")}
+          />
+        </Slide>
+
+        <Slide bgColor="primary" textColor="secondary" notes="<p>Styles are managed from the JS. Allows styles to easily be themed or extended</p>">
+          <CodePane
+            textSize={22}
+            transition={[]}
+            lang="jsx"
+            source={require("raw-loader!../assets/react3.example")}
+          />
+        </Slide>
+
         <Slide bgColor="primary" textColor="secondary">
           <Heading size={1} textColor="tertiary" fit>What can you build?</Heading>
             <List>
               <ListItem>Anything that can be built nativly</ListItem>
-              <ListItem>Use abstracted APIs and views</ListItem>
-              <ListItem>or create your own</ListItem>
-              <ListItem>(Native experience required!)</ListItem>
+              <ListItem>Use core APIs and views or create your own custom modules</ListItem>
+              <ListItem>(Native experience required for custom modules!)</ListItem>
             </List>
-        </Slide>
-
-        <Slide bgColor="primary" textColor="secondary" notes="You can even create Today widgets etc">
-          <Image src={images.widget} height={550} />
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary" notes="Just a selection of some of the higher profile apps">
@@ -224,7 +244,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary" textColor="secondary">
           <Heading size={1} textColor="tertiary" fit>What we built?</Heading>
             <List>
-              <ListItem>Initially an iOS app, folowed by Android</ListItem>
+              <ListItem>Initially an iOS app, followed by Android</ListItem>
               <ListItem>Offline syncing/caching ability</ListItem>
               <ListItem>Camera/barcode scanning</ListItem>
               <ListItem>Camera roll</ListItem>
@@ -237,7 +257,9 @@ export default class Presentation extends React.Component {
             <List>
               <ListItem>iOS, 6 months from start to production</ListItem>
               <ListItem>(Includes learning React & React Native)</ListItem>
-              <ListItem>Android took 2 weeks!</ListItem>
+              <Appear>
+                <ListItem>Android took 2 weeks!</ListItem>
+              </Appear>
             </List>
         </Slide>
 
@@ -267,7 +289,7 @@ export default class Presentation extends React.Component {
               <ListItem textColor="positive">+ Full performance</ListItem>
               <ListItem textColor="positive">+ Full native access</ListItem>
               <ListItem textColor="negative">- Need to learn additional language</ListItem>
-              <ListItem textColor="negative">- need different app for each platform</ListItem>
+              <ListItem textColor="negative">- Need different app for each platform</ListItem>
             </List>
         </Slide>
 
@@ -275,7 +297,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="tertiary">React Native</Heading>
             <List>
               <ListItem textColor="positive">+ Full native access</ListItem>
-              <ListItem textColor="positive">+ Only need to know Javascript</ListItem>
+              <ListItem textColor="positive">+ Only need to know JavaScript</ListItem>
               <ListItem textColor="positive">+ Great developer experience</ListItem>
               <ListItem textColor="negative">- Performance not always as good as native</ListItem>
             </List>
@@ -305,13 +327,22 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary">
+          <Heading size={1} textColor="tertiary">Resources</Heading>
+            <List>
+              <ListItem>facebook.github.io/react-native</ListItem>
+              <ListItem>github.com/jondot/awesome-react-native</ListItem>
+              <ListItem>Wes Bos - reactforbeginners.com</ListItem>
+            </List>
+        </Slide>
+
+        <Slide bgColor="primary" textColor="secondary">
           <Heading size={1} textColor="tertiary" fit>Questions?</Heading>
         </Slide>
 
         <Slide bgColor="primary" textColor="secondary">
           <Heading size={1} textColor="tertiary" fit>Thank you</Heading>
           <List>
-            <ListItem>Slides - http://react-native.robwalker.co/</ListItem>
+            <ListItem>Slides - react-native.robwalker.co</ListItem>
             <ListItem>Twitter - @robwalkerco</ListItem>
             <ListItem>Email - hi@robwalker.co</ListItem>
           </List>

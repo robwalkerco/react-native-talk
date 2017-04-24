@@ -1,19 +1,19 @@
 export default class Example extends Component {
   render = ({ showSubHeading, features }) => (
-    <View>
-      <Heading>
+    <div>
+      <h1>
         Getting started with
-      </Heading>
+      </h1>
       {showSubHeading && (
-        <SubHeading color="red">
-          React Native
-        </SubHeading>
+        <h2>
+          React
+        </h2>
       )}
-      <List>
-        {features.map(feature =>
-          <ListItem>{feature}</ListItem>
-        )}
-      </List>
-    </View>
+      <List
+        items={features}
+        itemComponent={FeatureItem}
+        limit={5}
+      />
+    </div>
   )
 }
